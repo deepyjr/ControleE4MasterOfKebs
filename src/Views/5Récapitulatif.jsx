@@ -1,10 +1,10 @@
 import React from "react";
 import SelectableCard from "../Components/Cards/SelectableCard";
 import { KebabContext } from "../Store/KebabContext";
-
+import { useHistory } from "react-router-dom";
 export default function Récapitulatif() {
   const { kebabState, kebabDispatch } = React.useContext(KebabContext);
-
+  let history = useHistory();
 
   return (
     <div>
@@ -46,7 +46,10 @@ export default function Récapitulatif() {
           </div>
         </div>
 
-        <button onClick={()=>kebabDispatch({type:"addToCart"})} className="buttonNext">
+        <button onClick={()=>{
+          kebabDispatch({type:"addToCart"})
+          history.replace("/selection-pain")
+      }} className="buttonNext">
           Commander
         </button>
       </div>
