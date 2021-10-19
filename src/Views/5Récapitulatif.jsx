@@ -10,17 +10,16 @@ export default function Récapitulatif() {
       <div>
         <h1 className="Title">Récapitulatif</h1>
         <div className="containerCards">
-          <h3>Pain : </h3>
-          <SelectableCard title={kebabState.pain} image={kebabState.pain}></SelectableCard>
-          <h3>Viande : </h3>
-          <SelectableCard title={kebabState.viande} image={kebabState.viande}></SelectableCard>
-          <h3>Garnitures</h3>
+          <SelectableCard disable={true} title={kebabState.pain} image={kebabState.pain}></SelectableCard>
+          <h3>+</h3>
+          <SelectableCard disable={true} title={kebabState.viande} image={kebabState.viande}></SelectableCard>
+          <h3>+</h3>
           {kebabState.currentKebab.garnitures.map((garniture => {
-            return <SelectableCard title={garniture} image={garniture}></SelectableCard>
+            return <SelectableCard disable={true} title={garniture} image={garniture}></SelectableCard>
           }))}
-          <h3>Sauces</h3>
+          <h3>+</h3>
           {kebabState.currentKebab.sauces.map((sauce => {
-            return <SelectableCard title={sauce} image={"Sauce-" + sauce}></SelectableCard>
+            return <SelectableCard disable={true} title={sauce} image={"Sauce-" + sauce}></SelectableCard>
           }))}
         </div>
         <button onClick={(e) => console.log(e)} className="buttonNext">
