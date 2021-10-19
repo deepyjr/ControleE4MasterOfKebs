@@ -3,11 +3,10 @@ import "./SelectableCard.css";
 import { KebabContext } from "../../Store/KebabContext";
 
 export default function SelectableCard(props) {
-  const { kebabDispatch } = React.useContext(KebabContext);
+  const { kebabState, kebabDispatch } = React.useContext(KebabContext);
   const [selected, setSelected] = React.useState(false);
 
   const handleClick = () => {
-    setSelected(!selected);
     switch (props.type) {
       case "Pain":
         kebabDispatch({ type: "ajouterPain", payload: props.title });
@@ -17,9 +16,11 @@ export default function SelectableCard(props) {
         break;
       case "Garniture":
         kebabDispatch({ type: "ajouterGarnitures", payload: props.title });
+        setSelected(!selected)
         break;
       case "Sauce":
-        kebabDispatch({ type: "ajouterSauces", payload: props.title });
+        !selected ? kebabDispatch({ type: "ajouterSauces", payload: props.title }) : kebabDispatch({ type: "supprimerSauces", payload: props.title });
+        setSelected(!selected)
         break;
     default:
         break
@@ -28,7 +29,7 @@ export default function SelectableCard(props) {
 
   return (
     <div className="selectable-card-container" onClick={props.disable === null || props.disable === undefined  ? handleClick : null}>
-      {selected ? (
+      {props.current === props.title || selected ? (
         <img
           src={process.env.PUBLIC_URL + "/Check.png"}
           className="checkImage"

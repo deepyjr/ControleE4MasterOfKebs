@@ -2,8 +2,10 @@ import React from "react";
 import "./Process.css";
 import SelectableCard from "../Components/Cards/SelectableCard";
 import { useHistory } from "react-router-dom";
+import { KebabContext } from "../Store/KebabContext";
 
 export default function SelectionPain() {
+  const { kebabState } = React.useContext(KebabContext);
   let history = useHistory();
   return (
     <div>
@@ -14,11 +16,13 @@ export default function SelectionPain() {
             title="Pain"
             image="Kebab"
             type="Pain"
+            current={kebabState.currentKebab.pain}
           ></SelectableCard>
           <SelectableCard
             title="Galette"
             image="Galette"
             type="Pain"
+            current={kebabState.currentKebab.pain}
           ></SelectableCard>
         </div>
       </div>
