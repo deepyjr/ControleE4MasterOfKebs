@@ -6,8 +6,8 @@ export default function SelectionViande() {
     <div>
       <h1 className="Title">Selection de la viande</h1>
       <div className="containerCards">
-        <SelectableCard title="Viande" image="Viande"></SelectableCard>
-        <SelectableCard title=" ̷T̷o̷f̷u̷" image="Tofu"></SelectableCard>
+        <SelectableCard title="Viande" image="Viande" type="Viande"></SelectableCard>
+        <SelectableCard title=" ̷T̷o̷f̷u̷" image="Tofu" type="Viande"></SelectableCard>
       </div>
       <button onClick={(e) => console.log(e)} className="buttonNext">
         Etape suivante

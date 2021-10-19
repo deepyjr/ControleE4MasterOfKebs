@@ -5,8 +5,8 @@ const localState = JSON.parse(localStorage.getItem('kebabState'));
 
 const initialState = {
     currentKebab: {
-        contenant: null,
-        base: null,
+        pain: null,
+        viande: null,
         garnitures: [],
         sauces: []
     },
@@ -15,16 +15,16 @@ const initialState = {
 
 function kebabReducer(state, action) {
     switch (action.type) {
-        case 'ajouterContenant': {
+        case 'ajouterPain': {
             return {
                 ...state,
-                currentKebab: {...currentKebab, contenant: action.payload}
+                currentKebab: {...state.currentKebab, pain: action.payload}
             }
         }
-        case 'ajouterBase': {
+        case 'ajouterViande': {
             return {
                 ...state,
-                currentKebab: {...currentKebab, base: action.payload}
+                currentKebab: {...state.currentKebab, viande: action.payload}
             }
         }
         case 'ajouterGarnitures': {
@@ -32,7 +32,7 @@ function kebabReducer(state, action) {
             temp.push(action.payload)
             return {
                 ...state,
-                currentKebab: {...currentKebab, garnitures: temp}
+                currentKebab: {...state.currentKebab, garnitures: temp}
             }
         }
         case 'ajouterSauces': {
@@ -40,7 +40,7 @@ function kebabReducer(state, action) {
             temp.push(action.payload)
             return {
                 ...state,
-                currentKebab: {...currentKebab, sauces: temp}
+                currentKebab: {...state.currentKebab, sauces: temp}
             }
         }
         case 'supprimerGarnitures': {
@@ -48,15 +48,15 @@ function kebabReducer(state, action) {
             temp.splice(temp.indexOf(action.payload), 1)
             return {
                 ...state,
-                currentKebab: {...currentKebab, garnitures: temp}
+                currentKebab: {...state.currentKebab, garnitures: temp}
             }
         }
-        case 'supprimerGarnitures': {
+        case 'supprimerSauces': {
             let temp = state.currentKebab.sauces
             temp.splice(temp.indexOf(action.payload), 1)
             return {
                 ...state,
-                currentKebab: {...currentKebab, sauces: temp}
+                currentKebab: {...state.currentKebab, sauces: temp}
             }
         }
         case 'addToCart': {
