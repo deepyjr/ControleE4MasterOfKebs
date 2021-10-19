@@ -8,11 +8,9 @@ import { KebabProvider } from "./Store/KebabContext"
 
 
 ReactDOM.render(
-  <React.StrictMode>
     <KebabProvider>
       <App />
-    </KebabProvider>
-  </React.StrictMode>,
+    </KebabProvider>,
   document.getElementById('root')
 );
 

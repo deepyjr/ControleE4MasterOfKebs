@@ -15,7 +15,7 @@ export default function SelectableCard(props) {
         kebabDispatch({ type: "ajouterViande", payload: props.title });
         break;
       case "Garniture":
-        kebabDispatch({ type: "ajouterGarnitures", payload: props.title });
+        !selected ? kebabDispatch({ type: "ajouterGarnitures", payload: props.title }) : kebabDispatch({ type: "supprimerGarnitures", payload: props.title });
         setSelected(!selected)
         break;
       case "Sauce":

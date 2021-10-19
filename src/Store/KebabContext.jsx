@@ -53,6 +53,7 @@ function kebabReducer(state, action) {
         }
         case 'supprimerSauces': {
             let temp = state.currentKebab.sauces
+            console.log(temp)
             temp.splice(temp.indexOf(action.payload), 1)
             console.log(temp)
             return {
