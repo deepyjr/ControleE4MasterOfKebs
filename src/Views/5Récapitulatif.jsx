@@ -3,7 +3,8 @@ import SelectableCard from "../Components/Cards/SelectableCard";
 import { KebabContext } from "../Store/KebabContext";
 
 export default function Récapitulatif() {
-  const { kebabState } = React.useContext(KebabContext);
+  const { kebabState, kebabDispatch } = React.useContext(KebabContext);
+
 
   return (
     <div>
@@ -45,7 +46,7 @@ export default function Récapitulatif() {
           </div>
         </div>
 
-        <button onClick={(e) => console.log(e)} className="buttonNext">
+        <button onClick={()=>kebabDispatch({type:"addToCart"})} className="buttonNext">
           Commander
         </button>
       </div>

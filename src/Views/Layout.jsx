@@ -8,13 +8,13 @@ import Recapitulatif from "./5Récapitulatif";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Cart from "../Components/Cart/Cart";
-import CommandeValidee from "./CommandeValidée"
+import CommandeValidee from "./CommandeValidée";
+import { KebabContext } from "../Store/KebabContext";
 function Layout() {
+  const { kebabState } = React.useContext(KebabContext);
   return (
     <div>
-      <Cart>
-        
-      </Cart>
+      {kebabState.kebabCart !== null && kebabState.kebabCart !== undefined && kebabState.kebabCart.length > 0 ? <Cart></Cart> : null }
       <Header></Header>
         <Switch>
           <Route exact path="/" component={SelectionPain} />
