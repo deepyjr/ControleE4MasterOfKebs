@@ -16,12 +16,12 @@ export default function SelectionGarniture() {
           ></SelectableCard>
           <SelectableCard
             title="Tomates"
-            image="Tomate"
+            image="Tomates"
             type="Garniture"
           ></SelectableCard>
           <SelectableCard
             title="Oignons"
-            image="Oignon"
+            image="Oignons"
             type="Garniture"
           ></SelectableCard>
         </div>
