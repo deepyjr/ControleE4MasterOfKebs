@@ -1,7 +1,8 @@
 import React from "react";
 import SelectableCard from "../Components/Cards/SelectableCard";
-
+import { useHistory } from "react-router-dom";
 export default function SelectionSauces() {
+  let history = useHistory();
   return (
     <div>
       <h1 className="Title">Quelques Sauces ?</h1>
@@ -40,7 +41,10 @@ export default function SelectionSauces() {
         </div>
       </div>
 
-      <button onClick={(e) => console.log(e)} className="buttonNext">
+      <button
+        onClick={(e) => history.replace("/Récapitulatif")}
+        className="buttonNext"
+      >
         Etape suivante
       </button>
     </div>
