@@ -1,8 +1,9 @@
 .footerImage {
-    width: 100%;
+  width: 100%;
 }
 .footerContainer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
 }
