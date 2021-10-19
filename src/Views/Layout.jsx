@@ -7,22 +7,28 @@ import SelectionSauces from "./4SelectionSauces";
 import Recapitulatif from "./5Récapitulatif";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
-
+import Cart from "../Components/Cart/Cart";
 
 function Layout() {
-
   return (
     <div>
+      <Cart>
+        
+      </Cart>
       <Header></Header>
-      <Switch>
-        <Route exact path="/" component={SelectionPain} />
-        <Route exact path="/Selection-Pain" component={SelectionPain} />
-        <Route exact path="/Selection-Viande" component={SelectionViande} />
-        <Route exact path="/Selection-Garniture" component={SelectionGarniture} />
-        <Route exact path="/Selection-Sauces" component={SelectionSauces} />
-        <Route exact path="/Récapitulatif" component={Recapitulatif} />
-      </Switch>
-      <Footer></Footer>
+        <Switch>
+          <Route exact path="/" component={SelectionPain} />
+          <Route exact path="/Selection-Pain" component={SelectionPain} />
+          <Route exact path="/Selection-Viande" component={SelectionViande} />
+          <Route
+            exact
+            path="/Selection-Garniture"
+            component={SelectionGarniture}
+          />
+          <Route exact path="/Selection-Sauces" component={SelectionSauces} />
+          <Route exact path="/Récapitulatif" component={Recapitulatif} />
+        </Switch>
+        <Footer></Footer>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+.elementContainer {
+  text-align: center;
+  width: 294px;
+  height: 73px;
+  background: #fffcf0;
+  border: 1px solid rgba(77, 3, 2, 0.16);
+  box-sizing: border-box;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  margin: 15px 0;
+}
+.containerKebab {
+  width: 200px;
+}
+p {
+  margin: 0 !important;
+  font-family: Inconsolata;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+}
