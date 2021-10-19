@@ -21,6 +21,8 @@ export default function SelectableCard(props) {
       case "Sauce":
         kebabDispatch({ type: "ajouterSauces", payload: props.title });
         break;
+    default:
+        break
     }
   };
 
