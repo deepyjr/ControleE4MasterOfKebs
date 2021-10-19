@@ -23,7 +23,6 @@
     line-height: 25px;
     text-align: center;
     margin: 15px 0 ;
-    z-index: 100;
 }
 .container{
     display: flex;
