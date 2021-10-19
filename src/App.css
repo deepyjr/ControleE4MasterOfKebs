@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inconsolata&display=swap');
+
 .App {
   text-align: center;
+  background-color: #FFF6D6;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -13,6 +21,14 @@
   }
 }
 
+h1 , h2 , h3 , h4 , h5 , h6{
+  font-family: 'Fredoka One', cursive;
+  color: #4D0302;
+}
+
+p {
+  font-family: 'Inconsolata', monospace;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
