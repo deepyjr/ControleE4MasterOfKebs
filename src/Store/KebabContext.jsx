@@ -54,9 +54,10 @@ function kebabReducer(state, action) {
         case 'supprimerSauces': {
             let temp = state.currentKebab.sauces
             temp.splice(temp.indexOf(action.payload), 1)
+            console.log(temp)
             return {
                 ...state,
-                currentKebab: {...state.currentKebab, sauces: [...new Set(temp)]}
+                currentKebab: {...state.currentKebab, sauces: [...temp]}
             }
         }
         case 'addToCart': {

@@ -1,10 +1,12 @@
 import React from "react";
 import SelectableCard from "../Components/Cards/SelectableCard";
 import { useHistory } from "react-router-dom";
+import { KebabContext } from "../Store/KebabContext";
 
 
 export default function SelectionViande() {
   let history = useHistory();
+  const { kebabState } = React.useContext(KebabContext);
   return (
     <div>
       <h1 className="Title">Selection de la viande</h1>
@@ -14,11 +16,13 @@ export default function SelectionViande() {
             title="Viande"
             image="Viande"
             type="Viande"
+            current={kebabState.currentKebab.viande}
           ></SelectableCard>
           <SelectableCard
             title=" ̷T̷o̷f̷u̷"
             image="Tofu"
             type="Viande"
+            current={kebabState.currentKebab.viande}
           ></SelectableCard>
         </div>
       </div>
