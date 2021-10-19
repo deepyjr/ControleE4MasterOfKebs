@@ -41,6 +41,7 @@ export default function Cart() {
       setGetValues(false);
     }
   }, [getValues]);
+
   return (
     <div className="cartContainer">
       <div className="containerPrix">

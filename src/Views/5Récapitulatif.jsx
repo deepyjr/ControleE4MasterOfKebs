@@ -49,6 +49,7 @@ export default function Récapitulatif() {
         <button onClick={()=>{
           kebabDispatch({type:"addToCart"})
           history.replace("/selection-pain")
+          window.location.reload();
       }} className="buttonNext">
           Commander
         </button>
