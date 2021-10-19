@@ -13,14 +13,14 @@ export default function Récapitulatif() {
           <div className="containerCards">
             <SelectableCard
               disable={true}
-              title={kebabState.pain}
-              image={kebabState.pain}
+              title={kebabState.currentKebab.pain}
+              image={kebabState.currentKebab.pain}
             ></SelectableCard>
             <h3>+</h3>
             <SelectableCard
               disable={true}
-              title={kebabState.viande}
-              image={kebabState.viande}
+              title={kebabState.currentKebab.viande}
+              image={kebabState.currentKebab.viande}
             ></SelectableCard>
             <h3>+</h3>
             {kebabState.currentKebab.garnitures.map((garniture) => {
