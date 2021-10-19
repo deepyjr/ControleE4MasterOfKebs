@@ -23,7 +23,7 @@ export default function Récapitulatif() {
           }))}
         </div>
         <button onClick={(e) => console.log(e)} className="buttonNext">
-          Etape suivante
+          Commander
         </button>
       </div>
     </div>
