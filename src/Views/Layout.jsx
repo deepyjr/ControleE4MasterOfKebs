@@ -6,7 +6,7 @@ import SelectionGarniture from "./3SelectionGarniture";
 import SelectionSauces from "./4SelectionSauces";
 import Recapitulatif from "./5Récapitulatif";
 import Header from "../Components/Header/Header";
-
+import Footer from "../Components/Footer/Footer";
 
 
 function Layout() {
@@ -22,6 +22,7 @@ function Layout() {
         <Route exact path="/Selection-Sauces" component={SelectionSauces} />
         <Route exact path="/Récapitulatif" component={Recapitulatif} />
       </Switch>
+      <Footer></Footer>
     </div>
   );
 }

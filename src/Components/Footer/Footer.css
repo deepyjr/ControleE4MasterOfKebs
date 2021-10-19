@@ -1,0 +1,8 @@
+.footerImage {
+    width: 100%;
+}
+.footerContainer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+}
