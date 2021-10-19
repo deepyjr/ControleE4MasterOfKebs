@@ -8,7 +8,7 @@ import Recapitulatif from "./5Récapitulatif";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Cart from "../Components/Cart/Cart";
-
+import CommandeValidee from "./CommandeValidée"
 function Layout() {
   return (
     <div>
@@ -27,6 +27,7 @@ function Layout() {
           />
           <Route exact path="/Selection-Sauces" component={SelectionSauces} />
           <Route exact path="/Récapitulatif" component={Recapitulatif} />
+          <Route exact path="/Commande-validée" component={CommandeValidee} />
         </Switch>
         <Footer></Footer>
     </div>

@@ -10,7 +10,7 @@ export default function Cart() {
       <div className="containerPrix">
         <p className="price">Total: 11€00</p> <br />
         <button
-          onClick={(e) => history.replace("/Selection-Sauces")}
+          onClick={(e) => history.replace("/Commande-validée")}
           className="buttonNext commande"
         >
           Passer la commande
