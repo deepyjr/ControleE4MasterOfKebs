@@ -32,7 +32,7 @@ function kebabReducer(state, action) {
             temp.push(action.payload)
             return {
                 ...state,
-                currentKebab: {...state.currentKebab, garnitures: temp}
+                currentKebab: {...state.currentKebab, garnitures: [...new Set(temp)]}
             }
         }
         case 'ajouterSauces': {
@@ -40,7 +40,7 @@ function kebabReducer(state, action) {
             temp.push(action.payload)
             return {
                 ...state,
-                currentKebab: {...state.currentKebab, sauces: temp}
+                currentKebab: {...state.currentKebab, sauces: [...new Set(temp)]}
             }
         }
         case 'supprimerGarnitures': {
@@ -48,7 +48,7 @@ function kebabReducer(state, action) {
             temp.splice(temp.indexOf(action.payload), 1)
             return {
                 ...state,
-                currentKebab: {...state.currentKebab, garnitures: temp}
+                currentKebab: {...state.currentKebab, garnitures: [...new Set(temp)]}
             }
         }
         case 'supprimerSauces': {
@@ -56,7 +56,7 @@ function kebabReducer(state, action) {
             temp.splice(temp.indexOf(action.payload), 1)
             return {
                 ...state,
-                currentKebab: {...state.currentKebab, sauces: temp}
+                currentKebab: {...state.currentKebab, sauces: [...new Set(temp)]}
             }
         }
         case 'addToCart': {
