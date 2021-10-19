@@ -44,19 +44,32 @@ export default function Cart() {
 
   return (
     <div className="cartContainer">
-      <div className="containerPrix">
-        <p className="price">Total: 11€00</p> <br />
-        <button
-          onClick={(e) => history.replace("/Commande-validée")}
-          className="buttonNext commande"
-        >
-          Passer la commande
-        </button>
+      <div className="containerTopItems">
+        <div className="containerPrix">
+          <p className="price">Total: 11€00</p> <br />
+          <button
+            onClick={(e) => history.replace("/Commande-validée")}
+            className="buttonNext commande"
+          >
+            Passer la commande
+          </button>
+        </div>
+        <div className="containerPannier">
+          <p className="price">Votre commande</p> <br />
+          {body}
+        </div>
       </div>
-      <div className="containerPannier">
-        <p className="price">Votre commande</p> <br />
-        {body}
-      </div>
+
+      <button
+        onClick={(e) => {
+            kebabDispatch({type:"resetAll"})
+            history.replace("/selection-pain")
+            window.location.reload();
+    }}
+        className="buttonNext commande reset"
+      >
+        Reset le panier
+      </button>
     </div>
   );
 }
