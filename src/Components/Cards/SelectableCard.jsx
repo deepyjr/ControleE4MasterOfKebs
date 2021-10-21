@@ -30,7 +30,7 @@ export default function SelectableCard(props) {
   };
 
   return (
-    <div className={selected ? "selectable-card-container-selected" : "selectable-card-container"} onClick={props.disable === null || props.disable === undefined  ? handleClick : null}>
+    <div className={props.current === props.title || selected ? "selectable-card-container-selected" : "selectable-card-container"} onClick={props.disable === null || props.disable === undefined  ? handleClick : null}>
       {props.current === props.title || selected ? (
         <img
           src={process.env.PUBLIC_URL + "/Check.png"}
