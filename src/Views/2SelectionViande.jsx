@@ -3,7 +3,6 @@ import SelectableCard from "../Components/Cards/SelectableCard";
 import { useHistory } from "react-router-dom";
 import { KebabContext } from "../Store/KebabContext";
 
-
 export default function SelectionViande() {
   let history = useHistory();
   const { kebabState } = React.useContext(KebabContext);
@@ -27,8 +26,11 @@ export default function SelectionViande() {
         </div>
       </div>
 
-      <button onClick={(e) => history.replace("/Selection-Garniture")} className="buttonNext">
-      Continuer
+      <button
+        onClick={(e) => history.replace("/Selection-Garniture")}
+        className="buttonNext"
+      >
+        Continuer
       </button>
     </div>
   );

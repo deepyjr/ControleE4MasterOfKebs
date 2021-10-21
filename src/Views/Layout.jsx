@@ -14,22 +14,26 @@ function Layout() {
   const { kebabState } = React.useContext(KebabContext);
   return (
     <div>
-      {kebabState.kebabCart !== null && kebabState.kebabCart !== undefined && kebabState.kebabCart.length > 0 ? <Cart></Cart> : null }
+      {kebabState.kebabCart !== null &&
+      kebabState.kebabCart !== undefined &&
+      kebabState.kebabCart.length > 0 ? (
+        <Cart></Cart>
+      ) : null}
       <Header></Header>
-        <Switch>
-          <Route exact path="/" component={SelectionPain} />
-          <Route exact path="/Selection-Pain" component={SelectionPain} />
-          <Route exact path="/Selection-Viande" component={SelectionViande} />
-          <Route
-            exact
-            path="/Selection-Garniture"
-            component={SelectionGarniture}
-          />
-          <Route exact path="/Selection-Sauces" component={SelectionSauces} />
-          <Route exact path="/Récapitulatif" component={Recapitulatif} />
-          <Route exact path="/Commande-validée" component={CommandeValidee} />
-        </Switch>
-        <Footer></Footer>
+      <Switch>
+        <Route exact path="/" component={SelectionPain} />
+        <Route exact path="/Selection-Pain" component={SelectionPain} />
+        <Route exact path="/Selection-Viande" component={SelectionViande} />
+        <Route
+          exact
+          path="/Selection-Garniture"
+          component={SelectionGarniture}
+        />
+        <Route exact path="/Selection-Sauces" component={SelectionSauces} />
+        <Route exact path="/Récapitulatif" component={Recapitulatif} />
+        <Route exact path="/Commande-validée" component={CommandeValidee} />
+      </Switch>
+      <Footer></Footer>
     </div>
   );
 }

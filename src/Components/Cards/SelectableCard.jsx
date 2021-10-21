@@ -15,22 +15,40 @@ export default function SelectableCard(props) {
         kebabDispatch({ type: "ajouterViande", payload: props.title });
         break;
       case "Garniture":
-        !selected ? kebabDispatch({ type: "ajouterGarnitures", payload: props.title }) : kebabDispatch({ type: "supprimerGarnitures", payload: props.title });
-        setSelected(!selected)
+        !selected
+          ? kebabDispatch({ type: "ajouterGarnitures", payload: props.title })
+          : kebabDispatch({
+              type: "supprimerGarnitures",
+              payload: props.title,
+            });
+        setSelected(!selected);
         break;
       case "Sauce":
         if (selected || kebabState.currentKebab.sauces.length < 2) {
-          !selected ? kebabDispatch({ type: "ajouterSauces", payload: props.title }) : kebabDispatch({ type: "supprimerSauces", payload: props.title });
-          setSelected(!selected)
+          !selected
+            ? kebabDispatch({ type: "ajouterSauces", payload: props.title })
+            : kebabDispatch({ type: "supprimerSauces", payload: props.title });
+          setSelected(!selected);
         }
         break;
-    default:
-        break
+      default:
+        break;
     }
   };
 
   return (
-    <div className={props.current === props.title || selected ? "selectable-card-container-selected" : "selectable-card-container"} onClick={props.disable === null || props.disable === undefined  ? handleClick : null}>
+    <div
+      className={
+        props.current === props.title || selected
+          ? "selectable-card-container-selected"
+          : "selectable-card-container"
+      }
+      onClick={
+        props.disable === null || props.disable === undefined
+          ? handleClick
+          : null
+      }
+    >
       {props.current === props.title || selected ? (
         <img
           src={process.env.PUBLIC_URL + "/Check.png"}

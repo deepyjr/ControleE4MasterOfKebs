@@ -12,27 +12,27 @@
   width: 184px;
   height: 194px;
   border-radius: 20px;
-  border: 4px solid #4D0302;
+  border: 4px solid #4d0302;
   display: flex;
   flex-direction: column;
   margin: 15px;
   text-align: center;
 }
 
-.checkImage{
-   float:right; 
-   width:30px ;
-   height:30px;
-   margin:5px 5px 0 auto;
+.checkImage {
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 0 auto;
 }
 
-.cardImage{
-    width:120px;
-    height:120px;
-    margin:0px auto;
+.cardImage {
+  width: 120px;
+  height: 120px;
+  margin: 0px auto;
 }
-.divVide{
-    width:30px ;
-    height:30px;
-    margin:5px 5px 0 auto;
+.divVide {
+  width: 30px;
+  height: 30px;
+  margin: 5px 5px 0 auto;
 }

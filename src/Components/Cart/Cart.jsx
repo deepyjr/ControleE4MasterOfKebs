@@ -16,23 +16,33 @@ export default function Cart() {
         kebabState.kebabCart.map((value, key) => {
           let sauces = "";
           let garniture = "";
-          for (key in value.sauces) {
+          for (key in value.kebab.sauces) {
             if (key > 0) {
-              sauces = sauces + " - " + value.sauces[key];
+              sauces = sauces + " - " + value.kebab.sauces[key];
             } else {
-              sauces = value.sauces[key];
+              sauces = value.kebab.sauces[key];
             }
           }
-          for (key in value.garnitures) {
+          for (key in value.kebab.garnitures) {
             if (key > 0) {
-              garniture = garniture + " - " + value.garnitures[key];
+              garniture = garniture + " - " + value.kebab.garnitures[key];
             } else {
-              garniture = value.garnitures[key];
+              garniture = value.kebab.garnitures[key];
             }
           }
           const title =
-            value.pain + ", " + value.viande + (garniture !== "" ? ", " + garniture : "") + (sauces !== "" ? ", " + sauces : "");
-          return <CartElement text={title} quantity={"1"}></CartElement>;
+            value.kebab.pain +
+            ", " +
+            value.kebab.viande +
+            (garniture !== "" ? ", " + garniture : "") +
+            (sauces !== "" ? ", " + sauces : "");
+          return (
+            <CartElement
+              text={title}
+              quantity={value.quantity}
+              id={value.id}
+            ></CartElement>
+          );
         })
       );
     };
@@ -62,10 +72,10 @@ export default function Cart() {
 
       <button
         onClick={(e) => {
-            kebabDispatch({type:"resetAll"})
-            history.replace("/selection-pain")
-            window.location.reload();
-    }}
+          kebabDispatch({ type: "resetAll" });
+          history.replace("/selection-pain");
+          window.location.reload();
+        }}
         className="buttonNext commande reset"
       >
         Reset le panier

@@ -24,33 +24,40 @@ export default function Récapitulatif() {
               image={kebabState.currentKebab.viande}
             ></SelectableCard>
             {kebabState.currentKebab.garnitures.length > 0 ? <h3>+</h3> : null}
-            {kebabState.currentKebab.garnitures.length > 0 ? kebabState.currentKebab.garnitures.map((garniture) => {
-              return (
-                <SelectableCard
-                  disable={true}
-                  title={garniture}
-                  image={garniture}
-                ></SelectableCard>
-              );
-            }) : null}
+            {kebabState.currentKebab.garnitures.length > 0
+              ? kebabState.currentKebab.garnitures.map((garniture) => {
+                  return (
+                    <SelectableCard
+                      disable={true}
+                      title={garniture}
+                      image={garniture}
+                    ></SelectableCard>
+                  );
+                })
+              : null}
             {kebabState.currentKebab.sauces.length > 0 ? <h3>+</h3> : null}
-            {kebabState.currentKebab.sauces.length > 0 ? kebabState.currentKebab.sauces.map((sauce) => {
-              return (
-                <SelectableCard
-                  disable={true}
-                  title={sauce}
-                  image={"Sauce-" + sauce}
-                ></SelectableCard>
-              );
-            }) : null}
+            {kebabState.currentKebab.sauces.length > 0
+              ? kebabState.currentKebab.sauces.map((sauce) => {
+                  return (
+                    <SelectableCard
+                      disable={true}
+                      title={sauce}
+                      image={"Sauce-" + sauce}
+                    ></SelectableCard>
+                  );
+                })
+              : null}
           </div>
         </div>
 
-        <button onClick={()=>{
-          kebabDispatch({type:"addToCart"})
-          history.replace("/selection-pain")
-          window.location.reload();
-      }} className="buttonNext">
+        <button
+          onClick={() => {
+            kebabDispatch({ type: "addToCart" });
+            history.replace("/selection-pain");
+            window.location.reload();
+          }}
+          className="buttonNext"
+        >
           Commander
         </button>
       </div>

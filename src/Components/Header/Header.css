@@ -1,12 +1,12 @@
-.header{
-    height:200px;
-    Width:200px;
-    margin-top: 32px;
+.header {
+  height: 200px;
+  width: 200px;
+  margin-top: 32px;
 }
-.resetCommande{
-   position: absolute;
-   left: 0;
-   margin: 15px 0 0 15px;
-   font-size: 15px !important;
-   min-height: 40px !important;
+.resetCommande {
+  position: absolute;
+  left: 0;
+  margin: 15px 0 0 15px;
+  font-size: 15px !important;
+  min-height: 40px !important;
 }

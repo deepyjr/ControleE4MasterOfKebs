@@ -1,9 +1,9 @@
 .footerImage {
-    width: 100%;
+  width: 100%;
 }
 .footerContainer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
 }

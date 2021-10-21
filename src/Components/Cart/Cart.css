@@ -2,7 +2,7 @@
   position: absolute;
   right: 0;
   height: 100%;
-  width: 350px;
+  width: 400px;
   background-color: #fffcf0;
   z-index: 150;
   display: flex;
@@ -17,17 +17,17 @@
   font-style: normal;
   font-weight: 500;
 }
-.containerPannier{
+.containerPannier {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.commande{
-  padding:0 15px;
+.commande {
+  padding: 0 15px;
 }
 
-.reset{
+.reset {
   bottom: 0;
   font-size: 15px !important;
   min-height: 40px !important;

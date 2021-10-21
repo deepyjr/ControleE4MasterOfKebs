@@ -26,9 +26,12 @@ export default function SelectionGarniture() {
           ></SelectableCard>
         </div>
       </div>
-        <button onClick={(e) => history.replace("/Selection-Sauces")} className="buttonNext">
-          Continuer
-        </button>
+      <button
+        onClick={(e) => history.replace("/Selection-Sauces")}
+        className="buttonNext"
+      >
+        Continuer
+      </button>
     </div>
   );
 }

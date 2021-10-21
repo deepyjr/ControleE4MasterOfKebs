@@ -12,15 +12,15 @@ import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import { useCallback } from "react";
 
-import PremadeKebabs from "./ModalComponents/PremadeKebabs"
-
+import PremadeKebabs from "./ModalComponents/PremadeKebabs";
 
 function ModalLoader(props) {
-
   ////////////////////////////////////////////////////Variables/////////////////////////////////////////////////////////////////
 
-  const [modalTitle, setModalTitle] = React.useState('');
-  const [openModal, setOpenModal] = React.useState(props.onlyModal ? props.onlyModal : false);
+  const [modalTitle, setModalTitle] = React.useState("");
+  const [openModal, setOpenModal] = React.useState(
+    props.onlyModal ? props.onlyModal : false
+  );
   const display = props.display;
   const [displayComponent, setDisplayComponent] = React.useState(null);
 
@@ -35,8 +35,7 @@ function ModalLoader(props) {
     if (props.setClicked) {
       props.setClicked(false);
     }
-  }, [props]
-  );
+  }, [props]);
 
   const useStyles = makeStyles((theme) => ({
     modal: {
@@ -44,7 +43,6 @@ function ModalLoader(props) {
       alignItems: "center",
       justifyContent: "center",
       outline: "none",
-      
     },
     paper: {
       backgroundColor: theme.palette.background.paper,
@@ -56,7 +54,7 @@ function ModalLoader(props) {
       outline: "none",
       width: "30%",
       border: "10px solid #000",
-      backgroundColor:"#FFF6D6"
+      backgroundColor: "#FFF6D6",
     },
     button: {
       marginBottom: theme.spacing(2),
@@ -65,13 +63,13 @@ function ModalLoader(props) {
       color: "#3f51b5",
       "&:hover": {
         backgroundColor: theme.palette.primary.main,
-        color: "#fff"
-      }
+        color: "#fff",
+      },
     },
     title: {
-        textAlign:"center",
-        fontSize:"30px"
-    }
+      textAlign: "center",
+      fontSize: "30px",
+    },
   }));
 
   ////////////////////////////////////////////////////Hooks/////////////////////////////////////////////////////////////////
@@ -81,12 +79,14 @@ function ModalLoader(props) {
       switch (display) {
         case "premadeKebab":
           setModalTitle("Voici nos Kébabs préfaits");
-          setDisplayComponent(<PremadeKebabs close={handleClose} kebab={props.kebab}/>);
+          setDisplayComponent(
+            <PremadeKebabs close={handleClose} kebab={props.kebab} />
+          );
           break;
         default:
           break;
       }
-    }
+    };
     if (display !== null) {
       whichDisplay(display);
     }
