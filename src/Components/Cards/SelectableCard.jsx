@@ -19,8 +19,10 @@ export default function SelectableCard(props) {
         setSelected(!selected)
         break;
       case "Sauce":
-        !selected ? kebabDispatch({ type: "ajouterSauces", payload: props.title }) : kebabDispatch({ type: "supprimerSauces", payload: props.title });
-        setSelected(!selected)
+        if (selected || kebabState.currentKebab.sauces.length < 2) {
+          !selected ? kebabDispatch({ type: "ajouterSauces", payload: props.title }) : kebabDispatch({ type: "supprimerSauces", payload: props.title });
+          setSelected(!selected)
+        }
         break;
     default:
         break
@@ -28,7 +30,7 @@ export default function SelectableCard(props) {
   };
 
   return (
-    <div className="selectable-card-container" onClick={props.disable === null || props.disable === undefined  ? handleClick : null}>
+    <div className={selected ? "selectable-card-container-selected" : "selectable-card-container"} onClick={props.disable === null || props.disable === undefined  ? handleClick : null}>
       {props.current === props.title || selected ? (
         <img
           src={process.env.PUBLIC_URL + "/Check.png"}

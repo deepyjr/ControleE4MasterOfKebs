@@ -70,6 +70,15 @@ function kebabReducer(state, action) {
                 kebabCart: temp
             }
         }
+        case 'addPremadeToCart': {
+            let temp = state.kebabCart
+            temp.push(action.payload)
+            return {
+                ...state,
+                currentKebab: initialState.currentKebab,
+                kebabCart: temp
+            }
+        }
         case 'resetCurrent': {
             return {
                 ...state,

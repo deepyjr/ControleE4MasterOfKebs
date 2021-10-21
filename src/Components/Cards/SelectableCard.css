@@ -6,6 +6,17 @@
   display: flex;
   flex-direction: column;
   margin: 15px;
+  text-align: center;
+}
+.selectable-card-container-selected {
+  width: 184px;
+  height: 194px;
+  border-radius: 20px;
+  border: 4px solid #4D0302;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  text-align: center;
 }
 
 .checkImage{

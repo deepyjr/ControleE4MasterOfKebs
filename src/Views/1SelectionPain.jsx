@@ -13,7 +13,7 @@ export default function SelectionPain() {
       <div className="container">
         <div className="containerCards">
           <SelectableCard
-            title="Pain"
+            title="Kebab"
             image="Kebab"
             type="Pain"
             current={kebabState.currentKebab.pain}

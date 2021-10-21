@@ -23,8 +23,8 @@ export default function Récapitulatif() {
               title={kebabState.currentKebab.viande}
               image={kebabState.currentKebab.viande}
             ></SelectableCard>
-            <h3>+</h3>
-            {kebabState.currentKebab.garnitures.map((garniture) => {
+            {kebabState.currentKebab.garnitures.length > 0 ? <h3>+</h3> : null}
+            {kebabState.currentKebab.garnitures.length > 0 ? kebabState.currentKebab.garnitures.map((garniture) => {
               return (
                 <SelectableCard
                   disable={true}
@@ -32,9 +32,9 @@ export default function Récapitulatif() {
                   image={garniture}
                 ></SelectableCard>
               );
-            })}
-            <h3>+</h3>
-            {kebabState.currentKebab.sauces.map((sauce) => {
+            }) : null}
+            {kebabState.currentKebab.sauces.length > 0 ? <h3>+</h3> : null}
+            {kebabState.currentKebab.sauces.length > 0 ? kebabState.currentKebab.sauces.map((sauce) => {
               return (
                 <SelectableCard
                   disable={true}
@@ -42,7 +42,7 @@ export default function Récapitulatif() {
                   image={"Sauce-" + sauce}
                 ></SelectableCard>
               );
-            })}
+            }) : null}
           </div>
         </div>
 

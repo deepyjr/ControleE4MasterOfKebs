@@ -31,7 +31,7 @@ export default function Cart() {
             }
           }
           const title =
-            value.pain + ", " + value.viande + ", " + garniture + ", " + sauces;
+            value.pain + ", " + value.viande + (garniture !== "" ? ", " + garniture : "") + (sauces !== "" ? ", " + sauces : "");
           return <CartElement text={title} quantity={"1"}></CartElement>;
         })
       );

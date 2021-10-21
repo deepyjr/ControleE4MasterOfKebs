@@ -19,7 +19,7 @@ export default function SelectionViande() {
             current={kebabState.currentKebab.viande}
           ></SelectableCard>
           <SelectableCard
-            title=" ̷T̷o̷f̷u̷"
+            title="Tofu"
             image="Tofu"
             type="Viande"
             current={kebabState.currentKebab.viande}
