@@ -28,7 +28,8 @@ export default function SelectionPain() {
       </div>
       <button
         onClick={(e) => history.replace("/Selection-Viande")}
-        className="buttonNext"
+        className={kebabState.currentKebab.pain === null ? "buttonNext-disabled" : "buttonNext"}
+        disabled={kebabState.currentKebab.pain === null ? true : false}
       >
         Continuer
       </button>

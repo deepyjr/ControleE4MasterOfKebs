@@ -28,7 +28,8 @@ export default function SelectionViande() {
 
       <button
         onClick={(e) => history.replace("/Selection-Garniture")}
-        className="buttonNext"
+        className={kebabState.currentKebab.viande === null ? "buttonNext-disabled" : "buttonNext"}
+        disabled={kebabState.currentKebab.viande === null ? true : false}
       >
         Continuer
       </button>
